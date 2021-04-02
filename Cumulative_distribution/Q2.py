@@ -54,7 +54,7 @@ c_int_dist = ([(1/norm)*c_int(u) for u in t])
 
 fig = plt.figure()
 plt.plot(l, c_dist, 'x', color='red', label='data')
-plt.plot(t+1, c_int_dist, '-', color='green', label='expectation')
+plt.plot(t, c_int_dist, '-', color='green', label='expectation')
 plt.ylabel('Cumulative density')
 plt.xlabel('luminosity')
 plt.legend()
@@ -62,31 +62,4 @@ plt.savefig('Q2 cumulative plots')
 plt.show()
 
 print(np.max([np.linalg.norm(c_dist[o] - c_int_dist[o]) for o in y]))
-
-#   I don't think the above is correct!
-
-#Testing!!!!
-
-#test = np.linspace(1, 15, 10)
-#
-#y = 1
-#
-#test_dist_1 = np.exp(-y*test)*y
-#ct1 = np.cumsum(test_dist_1)
-#
-#t2 = np.exp(-1.5*test)*1.5
-#ct2 = np.cumsum(t2)
-#
-#t3 = np.exp(-0.5*test)*0.5
-#ct3 = np.cumsum(t3)
-#
-#fig = plt.figure()
-#plt.plot(test, ct1, 'x', color='green')
-#plt.plot(test, ct2, '.', color='blue')
-#plt.plot(test, ct3, '.', color='red')
-#plt.show()
                                                                                                                  #yutdfx
-
-
-
-
